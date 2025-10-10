@@ -30,7 +30,21 @@ public class HelloWorldSwing {
          public void actionPerformed(ActionEvent e) {
             label.setText("Ok Button clicked.");
          }
-        });          
+        });
+        //menu
+        final JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Menu");
+        JMenuItem screen1 = new JMenuItem("Screen1");
+        screen1.setActionCommand("screen1");
+        JMenuItem screen2 = new JMenuItem("Screen2");
+        screen2.setActionCommand("screen2");
+        menu.add(screen1);
+        menu.add(screen2);
+        menuBar.add(menu);
+        frame.setJMenuBar(menuBar);
+
+
+
         
         frame.getContentPane().add(button);
         frame.getContentPane().add(button2);
@@ -50,4 +64,6 @@ public class HelloWorldSwing {
             }
         });
     }
+      
 }
+
